@@ -1,0 +1,66 @@
+
+To get an image in KB using the Coil library in Jetpack Compose, you must first obtain the image's Bitmap object after a successful load, convert it to a ByteArray, and then check the byte array's size in kilobytes.
+1. Load the Image and Get the Bitmap
+Use the AsyncImage composable with an onSuccess callback to capture the Drawable result and convert it to a Bitmap. You'll need the coil-compose dependency.
+kotlin
+import android.content.Context
+import android.graphics.Bitmap
+import androidx.compose.runtime.Composable
+import androidx.compose.ui.platform.LocalContext
+import androidx.core.graphics.drawable.toBitmap
+import coil.compose.AsyncImage
+import coil.request.ImageRequest
+
+@Composable
+fun LoadAndMeasureImage(imageUrl: String, onImageBitmapLoaded: (Bitmap) -> Unit) {
+    val context = LocalContext.current
+    AsyncImage(
+        model = ImageRequest.Builder(context)
+            .data(imageUrl)
+            .build(),
+        contentDescription = null,
+        onSuccess = { successState ->
+            // Convert the drawable result to a Bitmap
+            val bitmap = successState.result.drawable.toBitmap()
+            onImageBitmapLoaded(bitmap)
+        },
+        onError = {
+            // Handle error case
+        }
+    )
+}
+2. Convert Bitmap to ByteArray and Calculate KB Size
+You can then create an extension function to convert the Bitmap to a ByteArray and calculate its size in KB using a ByteArrayOutputStream.
+kotlin
+import android.graphics.Bitmap
+import java.io.ByteArrayOutputStream
+
+fun Bitmap.toByteArrayAndGetKB(): Double {
+    val stream = ByteArrayOutputStream()
+    // Compress the bitmap to PNG or JPEG format (PNG generally results in larger sizes)
+    this.compress(Bitmap.CompressFormat.JPEG, 100, stream)
+    val byteArray = stream.toByteArray()
+    // Convert bytes to kilobytes
+    return byteArray.size / 1024.0
+}
+3. Integrate into your Composable
+Combine these steps in your code to display the image and its size in KB.
+kotlin
+@Composable
+fun MyImageScreen() {
+    var imageKbSize by remember { mutableStateOf(0.0) }
+    val imageUrl = "https://example.com/image.jpg" // Replace with your URL
+
+    Column {
+        LoadAndMeasureImage(
+            imageUrl = imageUrl,
+            onImageBitmapLoaded = { bitmap ->
+                imageKbSize = bitmap.toByteArrayAndGetKB()
+            }
+        )
+        if (imageKbSize > 0) {
+            Text(text = "Image size: ${"%.2f".format(imageKbSize)} KB")
+        }
+    }
+}
+Note on Caching: Coil uses an internal disk and memory cache. If the image is already cached, the network request won't run again immediately. The file size retrieved this way will be the decoded bitmap size in memory, not necessarily the compressed file size on disk or transferred over the network (which is typically smaller).

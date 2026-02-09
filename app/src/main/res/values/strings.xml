@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Auckland Museum</string>
+    <!-- Although substitutions are integers, they're
+         formatted with a comma(,) if appropriate -->
+    <string name="app_subtitle">Downloaded: %1$s of %2$s</string>
+
+    <string name="back_button_desc">Back</string>
+    <string name="background_description">Background image</string>
+
+    <string name="basic_icon_legend_title">Details Icons Legend</string>
+       <string name="basic_icon_rel_object_link">Open related Object in Browser</string>
+    <string name="basic_icon_rel_object_no_link">No related Object link available</string>
+       <string name="basic_icon_rel_person_link">Open related Person in Browser</string>
+    <string name="basic_icon_rel_person_no_link">No related Person link available</string>
+
+    <string name="bottom_sheet_desc">Open bottom sheet</string>
+    <string name="bottom_sheet_dismiss">Dismiss</string>
+    <plurals name="bottom_sheet_full_description">
+        <item quantity="one">Display related Record panel</item>
+        <item quantity="other">Display related Records panel</item>
+    </plurals>
+    <!-- As above, regarding substitutions -->
+    <string name="bottom_sheet_objects"><![CDATA[%s
+        <B>objects</B> in Collection]]></string>
+    <string name="bottom_sheet_persons"><![CDATA[%s
+        <B>persons</B> in Collection]]></string>
+    <string name="bottom_sheet_retry">Retry Download</string>
+    <string name="bottom_sheet_save_button">Save image to File</string>
+    <string name="bottom_sheet_status"><![CDATA[<B>Collection Status</B>:]]></string>
+
+    <plurals name="details_assoc_events">
+        <item quantity="one"><![CDATA[<B>Associated event</B> (%d):]]></item>
+        <item quantity="other"><![CDATA[<B>Associated events</B> (%d):]]></item>
+    </plurals>
+    <plurals name="details_assoc_notes">
+        <item quantity="one"><![CDATA[<B>Associated note</B> (%d):]]></item>
+        <item quantity="other"><![CDATA[<B>Associated notes</B> (%d):]]></item>
+    </plurals>
+    <plurals name="details_assoc_places">
+        <item quantity="one"><![CDATA[<B>Associated place</B> (%d):]]></item>
+        <item quantity="other"><![CDATA[<B>Associated places</B> (%d):]]></item>
+    </plurals>
+    <plurals name="details_categories">
+        <item quantity="one"><![CDATA[<B>Category</B>: %s]]></item>
+        <item quantity="other"><![CDATA[<B>Categories</B>: %s]]></item>
+    </plurals>
+    <plurals name="details_copyrights">
+        <item quantity="one"><![CDATA[<B>Copyright</B>: %s]]></item>
+        <item quantity="other"><![CDATA[<B>Copyrights</B>: %s]]></item>
+    </plurals>
+    <plurals name="details_date_birth">
+        <item quantity="one"><![CDATA[<B>Date of Birth</B>: %s]]></item>
+        <item quantity="other"><![CDATA[<B>Dates of Birth</B>: %s]]></item>
+    </plurals>
+    <plurals name="details_date_death">
+        <item quantity="one"><![CDATA[<B>Date of Death</B>: %s]]></item>
+        <item quantity="other"><![CDATA[<B>Dates of Death</B>: %s]]></item>
+    </plurals>
+    <plurals name="details_date_closed">
+        <item quantity="one"><![CDATA[<B>Date of Closure</B>: %s]]></item>
+        <item quantity="other"><![CDATA[<B>Dates of Closure</B>: %s]]></item>
+    </plurals>
+    <plurals name="details_date_opened">
+        <item quantity="one"><![CDATA[<B>Date of Establishment</B>: %s]]></item>
+        <item quantity="other"><![CDATA[<B>Dates of Establishment</B>: %s]]></item>
+    </plurals>
+    <string name="details_description"><![CDATA[<B>Description</B>:]]></string>
+    <string name="details_display_location"><![CDATA[<B>Display
+        location</B>: %s]]></string>
+    <string name="details_documentation"><![CDATA[<B>Documentation</B>:]]></string>
+    <string name="details_image_title"><![CDATA[<B>Title</B>: %s]]></string>
+    <string name="details_message_advanced_search">or
+        Advanced to select a Department</string>
+    <string name="details_message_coll_objects">Start
+        by Searching the Collections &#8230;</string>
+    <string name="details_message_coll_persons">Start
+        by Searching the Collections</string>
+    <string name="details_message_init_faves">Start
+        by selecting one of your Bookmarks</string>
+    <string name="details_message_manage_search">try
+        Manage Search to refine results</string>
+    <plurals name="details_notes">
+        <item quantity="one"><![CDATA[<B>Note</B>:]]></item>
+        <item quantity="other"><![CDATA[<B>Notes</B>:]]></item>
+    </plurals>
+    <plurals name="details_object_images">
+        <item quantity="one"><![CDATA[<B>Image</B> (%d):]]></item>
+        <item quantity="other"><![CDATA[<B>Images</B> (%d):]]></item>
+    </plurals>
+    <string name="details_period"><![CDATA[<B>Period</B>: %s]]></string>
+    <string name="details_place"><![CDATA[<B>Place</B>: %s]]></string>
+    <plurals name="details_references">
+        <item quantity="one"><![CDATA[<B>Reference</B> (%d):]]></item>
+        <item quantity="other"><![CDATA[<B>References</B> (%d):]]></item>
+    </plurals>
+    <string name="details_reference_name"><![CDATA[<B>Name</B>: %s]]></string>
+    <plurals name="details_related">
+        <item quantity="one"><![CDATA[<B>Related record</B> (%d):]]></item>
+        <item quantity="other"><![CDATA[<B>Related records</B> (%d):]]></item>
+    </plurals>
+    <plurals name="details_related_images">
+        <item quantity="one"><![CDATA[<B>Related image</B> (%d):]]></item>
+        <item quantity="other"><![CDATA[<B>Related images</B> (%d):]]></item>
+    </plurals>
+    <plurals name="details_taxonomic">
+        <item quantity="one"><![CDATA[<B>Taxonomic
+        classification</B> (%d):]]></item>
+        <item quantity="other"><![CDATA[<B>Taxonomic
+        classifications</B> (%d):]]></item>
+    </plurals>
+    <plurals name="details_updates">
+        <item quantity="one"><![CDATA[<B>Last update</B>: %s]]></item>
+        <item quantity="other"><![CDATA[<B>Last updates</B>: %s]]></item>
+    </plurals>
+
+    <string name="dialog_cancel">Cancel</string>
+    <string name="dialog_confirm">Yes</string>
+    <string name="dialog_deny">No</string>
+    <string name="dialog_got_it">Got It</string>
+
+    <string name="download_desc">Download complete</string>
+    <string name="download_done">[ End of List ]</string>
+    <string name="download_more">Download more</string>
+
+    <string name="empty_list"><![CDATA[Nothing
+        found in search for <B>%s</B>]]></string>
+
+    <string name="fave_added">Fave added</string>    <!-- Toast -->
+    <string name="fave_is_favourite_message"><![CDATA[%1$s titled
+        <B>%2$s</B><BR>is <I>already</I> bookmarked &#8230;
+        <BR><BR><B>Remove</B> this item from bookmarks?]]></string>
+    <string name="fave_not_favourite_message"><![CDATA[%1$s titled
+         <B>%2$s</B><BR>is <I>not yet</I> bookmarked &#8230;
+         <BR><BR><B>Add</B> this item to your bookmarks?]]></string>
+    <string name="fave_removed">Fave removed</string><!-- Toast -->
+    <string name="faves_add_desc">Add bookmark</string>
+    <string name="faves_added"><![CDATA[<B>Added</B>: %s]]></string>
+    <string name="faves_error">Database error!</string>
+    <string name="faves_message"><![CDATA[This action will remove <B>all</B>
+        bookmarks,<BR>and cannot be undone &#8230; continue?]]></string>
+    <string name="faves_remove_desc">Remove bookmark</string>
+    <string name="faves_sort_by_desc">Favourites sorted by</string>
+    <string name="faves_sort_by_date">Sort by Date added</string>
+    <string name="faves_sort_by_name">Sort by Name</string>
+    <string name="faves_sort_by_type">Sort by Type</string>
+    <string name="faves_subtitle">Your Bookmarks (%d)</string>
+    <string name="favourites_empty">All bookmarks removed</string>
+
+    <string name="forbidden_api_key"><![CDATA[AM says that the <B>API
+        key</B><BR>provided by this app is <B>invalid</B>]]></string>
+    <string name="forbidden_api_key_short">AM says API key invalid</string>
+
+    <string name="found_not_message"><![CDATA[Auckland
+        Museum says: <B>%s</B> not found]]></string>
+
+    <string name="help_sample_menu_item_0">Documentary Heritage Collection</string>
+    <string name="help_sample_menu_item_1">Human History Collection</string>
+    <string name="help_sample_menu_item_2">Natural Sciences Collection</string>
+
+    <string name="help_section_about"><![CDATA[This app makes use of the
+        <B>Tāmaki Paenga Hira Public API</B>, allowing you to search within
+        the <I>online</I> collections of <B>Auckland War Memorial Museum</B>,
+        more commonly known as simply: the <I>Auckland Museum</I>]]></string>
+    <string name="help_section_format"><![CDATA[<B>%1$s</B>: %2$s]]></string>
+
+    <string name="help_section_header_0">About the App</string>
+    <string name="help_section_header_1">Home Screen</string>
+
+    <string name="help_section_main_0">Easily test connectivity to the
+        museum database &#8230; and as a bonus, you get to see how many
+        Object and Person records are accessible using the app.</string>
+    <string name="help_section_main_1">PLACEHOLDER</string>
+    <string name="help_section_main_2"><![CDATA[Query the online collections
+        to find any <I>tangible</I> item within the museum. You have the option
+        to narrow your search to one of three specific <B>collection areas</B>,
+        or a specific <B>department</B> within a collection area. To view a list
+        of the collection areas <I>now</I>, and their departments, refer to the
+        <B>Icons Legend</B> menu at top right.<BR>You will also find a menu for
+        the Icons Legend(s) on the Search by Object page itself.]]></string>
+    <string name="help_section_main_3">PLACEHOLDER</string>
+    <string name="help_section_main_4"><![CDATA[The museum API works off <I>two</I>
+        separate datasets: Objects and People. In the Search by Person section,
+        you can query the <B>People</B> dataset. However, the options for
+        narrowing the search are not as advanced as the Objects section.]]></string>
+    <string name="help_section_main_5">PLACEHOLDER</string>
+    <string name="help_section_main_6"><![CDATA[Within both sections mentioned above,
+        you have the option to add <I>any</I> search result as a Bookmark. While
+        viewing the item\'s Details, go to the menu at top right in that screen,
+        and select Toggle Bookmark. This will open a small panel that will show
+        whether or not the item is saved in the local database (on your device).
+        Click/tap the <B>Add/Remove bookmark</B> button, as appropriate.
+        <BR>You can then find all your Bookmarks in one place, where you can sort
+        them by Date (the default), by Name, or by Type (dataset).]]></string>
+    <string name="help_section_main_7">PLACEHOLDER</string>
+    <string name="help_section_main_8">PLACEHOLDER</string>
+    <!-- Special character is "WINKING FACE" smiley =) -->
+    <string name="help_section_main_9"><![CDATA[<I>This</I> screen &#128521;]]></string>
+    <string name="help_section_main_10">PLACEHOLDER</string>
+    <string name="help_section_main_11"><![CDATA[Within the Settings
+        section, you can set preferences for the following:<UL>
+        <LI>The number of results to fetch each time (default: 12)</LI>
+        <LI>Whether or not to save <I>successful</I> search queries &amp;
+            suggest them as auto-complete next time (default: off)</LI>
+        <LI>Whether or not to sort all search results
+            in Descending order (default: off)</LI>
+        <LI>Whether or not to save time/date when
+            adding a Bookmark (default: off)</LI></UL>]]></string>
+
+    <string name="icons_legend_collection">%s Collection</string>
+    <string name="icons_legend_parent"><![CDATA[The <B>Collections</B>]]></string>
+    <string name="icons_legend_title">%s Icons</string>
+
+    <!-- Used for both icon contentDescription and bottomSheet header ...
+         in the case of the header, a colon (:) is added programmatically -->
+    <string name="image_info_desc">Image info</string>
+
+    <string name="image_info_height">Height: %d</string>
+      <string name="image_info_width">Width: %d</string>
+      <string name="image_info_bytes">Size: %1$.0f %2$s</string><!-- 0 decimal places -->
+    <string name="image_info_x_bytes">Size: %1$.2f %2$s</string><!-- 2 decimal places -->
+    <string name="image_info_0_bytes">Size in KB: %s</string><!-- i.e. size not known -->
+
+    <string name="item_image_desc">Item image</string>
+
+    <string name="image_none">No image for this item</string>
+    <string name="image_retry">Retry image</string>
+    <string name="images_retry">Retry images</string><!-- Note plural -->
+    <string name="images_save_failed">An error occurred!</string>
+    <string name="images_save_success">File saved</string>
+
+    <plurals name="list_item_departments">
+        <item quantity="one"><![CDATA[<B>Department</B>: %s]]></item>
+        <item quantity="other"><![CDATA[<B>Departments</B>: %s]]></item>
+    </plurals>
+    <string name="list_item_title"><![CDATA[<B>Title</B>: %s]]></string>
+    <plurals name="list_item_types">
+        <item quantity="one"><![CDATA[<B>Type</B>: %s]]></item>
+        <item quantity="other"><![CDATA[<B>Types</B>: %s]]></item>
+    </plurals>
+
+    <string name="loading_anim">Downloading &#8230;</string>
+    <string name="loading_database">Loading &#8230;</string>
+    <string name="loading_failed">Failed to load</string>
+    <string name="loading_retry">Retry</string>
+
+    <string name="manage_search_desc">Manage search</string>
+
+    <string name="menu_clear_history">Remove History Items</string>
+    <string name="menu_clear_search">Clear Search</string>
+    <string name="menu_icons_legend">Icons Legend</string>
+    <string name="menu_help_sample_2">Object items</string>
+    <string name="menu_help_sample_3">Specimen items</string>
+    <string name="menu_reset_settings">Restore App Defaults</string>
+    <string name="menu_search_dept">Search by Dept</string>
+    <string name="menu_faves_delete_all">Remove all Bookmarks</string>
+    <string name="menu_toggle_desc">Toggle menu</string>
+    <string name="menu_toggle_fave">Toggle Bookmark</string>
+
+    <string name="museum_front_desc">Auckland Museum North Entrance</string>
+    <string name="museum_image_copyright">&#169; Auckland
+        War Memorial Museum - Tāmaki Paenga Hira</string>
+
+    <string name="nav_collection_status">Collection Status</string>
+    <string name="nav_faves_1">Your Bookmarks</string>      <!-- Button -->
+    <string name="nav_faves_2">AM Bookmark</string>  <!-- Details Title -->
+    <string name="nav_faves_3">%s Details</string><!-- Obj|Per Subtitle -->
+    <string name="nav_help">Help | About</string>
+    <string name="nav_images">Title: %s</string> <!-- (Shared) Subtitle -->
+    <string name="nav_images_1">AM Object Images</string><!-- ImageInfo -->
+    <plurals name="nav_images_1">
+        <item quantity="one">AM Object Image (%d)</item>     <!-- Title -->
+        <item quantity="other">AM Object Images (%d)</item>
+    </plurals>
+    <string name="nav_images_2">AM Person Images</string><!-- ImageInfo -->
+    <plurals name="nav_images_2">
+        <item quantity="one">AM Person Image (%d)</item>     <!-- Title -->
+        <item quantity="other">AM Person Images (%d)</item>
+    </plurals>
+    <string name="nav_objects_1">Search by Object</string>  <!-- Button -->
+    <string name="nav_objects_2">AM Search by Object</string><!-- Title -->
+    <string name="nav_objects_3">AM Object Details</string><!-- Details -->
+    <string name="nav_persons_1">Search by Person</string>  <!-- Button -->
+    <string name="nav_persons_2">AM Search by Person</string><!-- Title -->
+    <string name="nav_persons_3">AM Person Details</string><!-- Details -->
+    <string name="nav_settings">App Settings</string>
+
+    <string name="search_all_on">Currently : Search All</string>
+    <string name="search_adv_off">Turn off in Other menu</string>
+    <string name="search_all_coll">Search all Collections</string>
+    <string name="search_all_dept">All %s</string>
+    <string name="search_clear">Clear search box</string>
+    <string name="search_desc">Run search</string>
+    <string name="search_dept"><![CDATA[Select a <B>%s</B> dept]]></string>
+    <string name="search_hint">Enter your query</string>
+
+    <string name="setting_num_results_label">Select quantity</string>
+      <string name="setting_num_results_text">Number of results to fetch each time</string>
+       <string name="setting_save_date_faves">Save time/date when adding Bookmark</string>
+     <string name="setting_save_history_text">Save/restore history for each query</string>
+    <string name="setting_sort_by_descending">Sort search results Descending order</string>
+           <string name="setting_zoom_images">Zoom fullscreen images to fill space</string>
+
+    <string name="settings_reset_message"><![CDATA[This action will reset <B>all</B>
+        current settings<BR>to their app default values &#8230; continue?]]></string>
+    <string name="settings_toast_done">Done!</string>
+
+    <string name="text_undefined">Undefined</string>
+
+</resources>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <array name="basic_icon_drawable_ids">
+        <item>@drawable/outline_bottom_panel_open_24</item>
+        <item>@drawable/baseline_category_24</item>
+        <item>@drawable/outline_category_24</item>
+        <item>@drawable/baseline_person_24</item>
+        <item>@drawable/outline_person_24</item>
+    </array>
+
+    <!-- Note: array, NOT string-array ...
+         parsed using obtainTypedArray -->
+    <array name="basic_icon_string_ids">
+        <!-- Placeholder only: actually uses plurals -->
+        <item>@plurals/bottom_sheet_full_description</item>
+        <item>@string/basic_icon_rel_object_link</item>
+        <item>@string/basic_icon_rel_object_no_link</item>
+        <item>@string/basic_icon_rel_person_link</item>
+        <item>@string/basic_icon_rel_person_no_link</item>
+    </array>
+
+    <string-array name="help_sample_menu_items">
+        <item>@string/help_sample_menu_item_0</item>
+        <item>@string/help_sample_menu_item_1</item>
+        <item>@string/help_sample_menu_item_2</item>
+    </string-array>
+
+    <string-array name="help_section_headers">
+        <item>@string/help_section_header_0</item>
+        <item>@string/help_section_header_1</item>
+    </string-array>
+
+    <array name="help_section_main_drawable_ids">
+        <item>@drawable/icons_lib_building_24</item>
+    </array>
+
+    <!-- Note: an array of arrays ... see HelpScreen -->
+    <array name="help_section_string_arrays">
+        <item>@array/help_section_about_string_ids</item>
+    </array>
+    <string-array name="help_section_about_string_ids">
+        <item>@string/help_section_about</item>
+    </string-array>
+    <!--
+    <string-array name="help_section_main_string_ids">
+        <item>@string/help_section_main_0</item>
+    </string-array>
+    -->
+
+    <integer-array name="settings_num_results">
+        <item>1</item>
+        <item>4</item>
+        <item>8</item>
+        <item>12</item>
+    </integer-array>
+
+</resources>

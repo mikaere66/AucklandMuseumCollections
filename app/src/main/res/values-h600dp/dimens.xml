@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="font_size_copyright">12sp</dimen>
+
+    <!-- 600 minus large screen main button spacing -->
+    <dimen name="large_screen_main_image_width">580dp</dimen>
+
+</resources>

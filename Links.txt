@@ -1,0 +1,29 @@
+
+https://apidocs.browser.vernonsystems.com/
+
+https://mixedanalytics.com/tools/basic-authentication-generator/
+
+https://medium.com/@1550707241489/how-to-add-headers-to-retrofit-android-kotlin-450da34d3c3a
+
+https://medium.com/@gvpraveen.ravi/understanding-url-encoding-in-android-studio-with-retrofit-045f6e6fadb5
+
+https://stackoverflow.com/questions/69630247/retrofit-2-how-to-handle-server-response-thats-sometimes-void-sometimes-non-voi
+{"message":"Person with ID : 671988 does not exist"}
+
+https://stackoverflow.com/questions/49846295/kotlin-count-occurrences-of-chararray-in-string/49854227
+
+Reset state (near EOF):
+https://developer.android.com/codelabs/basic-android-kotlin-compose-viewmodel-and-state
+
+https://stackoverflow.com/questions/42461576/how-to-avoid-url-encoding-in-retrofit/53456772
+
+https://stackoverflow.com/questions/16449847/initializing-a-set-with-an-iterable/16449898
+
+https://stackoverflow.com/questions/68726503/jetpack-compose-how-do-you-position-ui-elements-within-their-parent-with-exact
+
+https://developer.android.com/develop/ui/compose/lists#sticky-headers
+
+https://developer.android.com/develop/ui/compose/layouts/adaptive/use-window-size-classes
+
+The Storage Access Framework:
+https://commonsware.com/Jetpack/pages/chap-content-001.html

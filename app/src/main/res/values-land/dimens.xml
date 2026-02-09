@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="padding_vertical_main">@dimen/padding_great</dimen>
+
+    <dimen name="small_screen_main_image_height">200dp</dimen>
+
+</resources>
