@@ -8,13 +8,10 @@ import com.michaelrmossman.aucklandmuseum3api.util.MUSEUM_INDEX_OBJECT
 import com.michaelrmossman.aucklandmuseum3api.util.MUSEUM_INDEX_OBJECTS
 import com.michaelrmossman.aucklandmuseum3api.util.MUSEUM_INDEX_PERSON
 import com.michaelrmossman.aucklandmuseum3api.util.MUSEUM_INDEX_PERSONS
-import com.michaelrmossman.aucklandmuseum3api.util.MUSEUM_SEARCH_PATH
-import com.michaelrmossman.aucklandmuseum3api.util.MUSEUM_TYPE_KEY
 import retrofit2.Call
 import retrofit2.http.GET
 import retrofit2.http.Path
 import retrofit2.http.Query
-import retrofit2.http.Url
 
 interface MuseumApiService {
 

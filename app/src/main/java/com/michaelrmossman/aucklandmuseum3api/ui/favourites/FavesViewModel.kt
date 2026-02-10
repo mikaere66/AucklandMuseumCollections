@@ -43,6 +43,9 @@ class FavesViewModel(
     val favesSortedBy: LiveData<Int> =
         favesRepository.favesSortedBy.asLiveData()
 
+    val favourites: LiveData<List<FaveEntity>> =
+        favesRepository.getAllFavourites().asLiveData()
+
     fun getObject(
         objectId: String
     ) {

@@ -6,10 +6,7 @@
     <!-- For pre Android 12 devices, icon is plain black OR white,
         depending on system's dark mode. See also values-night -->
     <style name="Theme.AucklandMuseumV3API.Splash" parent="Theme.SplashScreen">
-        <item name="windowSplashScreenBackground">@color/splash_background</item>
-        <item name="windowSplashScreenAnimatedIcon">@drawable/splash_logo_animator</item>
-        <item name="windowSplashScreenAnimationDuration">@integer/splash_duration</item>
-        <item name="android:windowSplashScreenIconBackgroundColor">@color/splash_icon_background</item>
+        <item name="windowSplashScreenAnimatedIcon">@mipmap/splash_logo_legacy</item>
         <item name="postSplashScreenTheme">@style/Theme.AucklandMuseumV3API</item>
     </style>
 
