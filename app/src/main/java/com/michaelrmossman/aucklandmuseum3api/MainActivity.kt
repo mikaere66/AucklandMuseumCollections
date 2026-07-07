@@ -72,10 +72,18 @@ class MainActivity: ComponentActivity() {
 
     /* Call initiated from ImageInfoBottomSheet() */
     private fun createFileInDownloads(filename: String) {
+        val filenameAndExt = when (
+            filename.endsWith(".jpg")
+            ||
+            filename.endsWith(".jpeg")
+        ) {
+            true -> filename
+            else -> filename.plus(".jpg")
+        }
         val intent = Intent(Intent.ACTION_CREATE_DOCUMENT).apply {
             addCategory(Intent.CATEGORY_OPENABLE)
             type = "image/jpeg" // Must be "jpeg" to force file extension
-            putExtra(Intent.EXTRA_TITLE,filename)
+            putExtra(Intent.EXTRA_TITLE,filenameAndExt)
         }
         launcher.launch(intent)
     }

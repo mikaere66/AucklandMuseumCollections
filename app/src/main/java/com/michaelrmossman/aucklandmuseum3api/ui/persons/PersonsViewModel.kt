@@ -14,18 +14,18 @@ import com.michaelrmossman.aucklandmuseum3api.data.FavouritesRepository
 import com.michaelrmossman.aucklandmuseum3api.data.HistoryRepository
 import com.michaelrmossman.aucklandmuseum3api.data.NetworkPersonsRepository
 import com.michaelrmossman.aucklandmuseum3api.data.SettingsRepository
-import com.michaelrmossman.aucklandmuseum3api.enum.Collection
 import com.michaelrmossman.aucklandmuseum3api.enum.MediaType
 import com.michaelrmossman.aucklandmuseum3api.enum.SortOpecBy
 import com.michaelrmossman.aucklandmuseum3api.model.OpacPerson
 import com.michaelrmossman.aucklandmuseum3api.state.PersonsListState
 import com.michaelrmossman.aucklandmuseum3api.state.PersonsListState.Companion.START_FROM
 import com.michaelrmossman.aucklandmuseum3api.state.SearchUiState
+import com.michaelrmossman.aucklandmuseum3api.util.SETTING_COMMON_NUM_RESULTS
+import kotlinx.coroutines.async
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.flow.update
-import kotlinx.coroutines.async
 import kotlinx.coroutines.launch
 import java.io.IOException
 
@@ -82,6 +82,9 @@ class PersonsViewModel(
             )
         }
         viewModelScope.launch {
+            val limitSetting = settingsRepository.getSettingById(
+                settingId = SETTING_COMMON_NUM_RESULTS
+            )
             val sortOrder =
                 SortOpecBy.entries[settingsRepository.sortOrder.first()]
             try {
@@ -89,6 +92,7 @@ class PersonsViewModel(
                     startFrom = startFrom,
                     sortOrder = sortOrder.toString(),
                     query = searchQuery,
+                    limitSetting = limitSetting,
                     callback = { response ->
                         when (response.responseCode) {
                             200 -> {

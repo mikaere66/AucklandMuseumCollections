@@ -13,11 +13,12 @@ import com.michaelrmossman.aucklandmuseum3api.MuseumApplication
 import com.michaelrmossman.aucklandmuseum3api.data.FavouritesRepository
 import com.michaelrmossman.aucklandmuseum3api.data.NetworkObjectsRepository
 import com.michaelrmossman.aucklandmuseum3api.data.NetworkPersonsRepository
+import com.michaelrmossman.aucklandmuseum3api.data.SettingsRepository
 import com.michaelrmossman.aucklandmuseum3api.enum.SortOpecBy
-import com.michaelrmossman.aucklandmuseum3api.objects.ImageObjects
 import com.michaelrmossman.aucklandmuseum3api.navigation.CurrentScreen
 import com.michaelrmossman.aucklandmuseum3api.state.CollectionUiState
 import com.michaelrmossman.aucklandmuseum3api.state.CollectionsState
+import com.michaelrmossman.aucklandmuseum3api.util.SETTING_COMMON_NUM_RESULTS
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.update
@@ -29,15 +30,12 @@ class MainViewModel(
     favesRepository: FavouritesRepository,
     private val objectsRepository : NetworkObjectsRepository,
     private val personsRepository : NetworkPersonsRepository,
-    // settingsRepository: SettingsRepository
+    private val settingsRepository: SettingsRepository
 ) : ViewModel() {
 
     // HelpScreen | FavesScreen | MainScreen
     val backStack = mutableStateListOf<CurrentScreen>(
         CurrentScreen.MainScreen
-//        ImagesScreen(
-//            imageObjects = ImageObjects()
-//        )
     )
 
     val faveCount = favesRepository.faveCount.asLiveData()
@@ -88,11 +86,15 @@ class MainViewModel(
             )
         }
         viewModelScope.launch {
+            val limitSetting = settingsRepository.getSettingById(
+                settingId = SETTING_COMMON_NUM_RESULTS
+            )
             try {
                 objectsRepository.getObjectSearchResults(
                     startFrom = 0,
                     sortOrder = getDefaultSortOrder(),
                     query = String(),
+                    limitSetting = limitSetting,
                     facets = null,
                     callback = { response ->
                         when (response.responseCode) {
@@ -133,11 +135,15 @@ class MainViewModel(
             )
         }
         viewModelScope.launch {
+            val limitSetting = settingsRepository.getSettingById(
+                settingId = SETTING_COMMON_NUM_RESULTS
+            )
             try {
                 personsRepository.getPersonSearchResults(
                     startFrom = 0,
                     sortOrder = getDefaultSortOrder(),
                     query = String(),
+                    limitSetting = limitSetting,
                     callback = { response ->
                         when (response.responseCode) {
                             200 -> {
@@ -256,10 +262,10 @@ class MainViewModel(
                     application.container.networkObjectsRepository
                 val personsRepository =
                     application.container.networkPersonsRepository
-                // val settingsRepository = application.container.settingsRepository
+                val settingsRepository = application.container.settingsRepository
                 MainViewModel(
                     favesRepository, objectsRepository,
-                    personsRepository // , settingsRepository
+                    personsRepository, settingsRepository
                 )
             }
         }

@@ -1,40 +1,29 @@
 package com.michaelrmossman.aucklandmuseum3api.util
 
 import android.graphics.Bitmap
-import androidx.compose.animation.core.LinearEasing
-import androidx.compose.animation.core.animateFloat
-import androidx.compose.animation.core.infiniteRepeatable
-import androidx.compose.animation.core.rememberInfiniteTransition
-import androidx.compose.animation.core.tween
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.getValue
-import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.graphicsLayer
-import androidx.compose.ui.res.integerResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.AnnotatedString
 import androidx.compose.ui.text.SpanStyle
 import androidx.compose.ui.text.TextLinkStyles
 import androidx.compose.ui.text.fromHtml
 import androidx.compose.ui.text.style.TextDecoration
-import androidx.compose.ui.text.withStyle
-import com.michaelrmossman.aucklandmuseum3api.R
 import com.michaelrmossman.aucklandmuseum3api.MuseumApplication.Companion.instance
+import com.michaelrmossman.aucklandmuseum3api.R
 import com.michaelrmossman.aucklandmuseum3api.enum.Collection
 import com.michaelrmossman.aucklandmuseum3api.model.OpacObject
 import com.michaelrmossman.aucklandmuseum3api.model.OpacPerson
-import com.michaelrmossman.aucklandmuseum3api.model.RelatedRecord
 import com.michaelrmossman.aucklandmuseum3api.model.RelationshipsCollection
 import com.michaelrmossman.aucklandmuseum3api.util.TextUtils.getTextFromString
+import okhttp3.ResponseBody
+import org.json.JSONException
+import org.json.JSONObject
 import java.io.ByteArrayOutputStream
 import java.text.NumberFormat
 import java.text.SimpleDateFormat
 import java.util.Date
 import java.util.Locale
-import okhttp3.ResponseBody
-import org.json.JSONException
-import org.json.JSONObject
 
 /**
  * Extension functions used throughout the app

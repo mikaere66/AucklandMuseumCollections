@@ -12,6 +12,8 @@ import kotlinx.coroutines.flow.flowOf
 class SettingsRepository(
     private val settingsDao: SettingsDao
 ) {
+    suspend fun getSettingById(settingId: String): Int =
+        settingsDao.getSettingById(settingId = settingId)
 
     suspend fun resetAllSettings(): Int {
         val settings = SettingEntity.getSettings()

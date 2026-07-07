@@ -70,7 +70,7 @@ class DefaultAppContainer(
                     .url(urlReplaced)
                     .header(MUSEUM_TYPE_KEY, MUSEUM_DATA_TYPE)
                     .header(MUSEUM_DATA_AUTH, apiKey)
-//                    .header(MUSEUM_CONTENT_KEY, MUSEUM_CONTENT_TYPE)
+                    //.header(MUSEUM_CONTENT_KEY, MUSEUM_CONTENT_TYPE)
                     .build()
                 return chain.proceed(newRequest)
             }

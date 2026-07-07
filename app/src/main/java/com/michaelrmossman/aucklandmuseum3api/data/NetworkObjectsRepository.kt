@@ -1,5 +1,7 @@
 package com.michaelrmossman.aucklandmuseum3api.data
 
+import com.michaelrmossman.aucklandmuseum3api.MuseumApplication.Companion.instance
+import com.michaelrmossman.aucklandmuseum3api.R
 import com.michaelrmossman.aucklandmuseum3api.model.OpacObject
 import com.michaelrmossman.aucklandmuseum3api.model.OpacObjects
 import com.michaelrmossman.aucklandmuseum3api.network.MuseumApiService
@@ -18,10 +20,13 @@ class NetworkObjectsRepository(
     fun getObjectSearchResults(
         callback: (ObjectsResponse) -> Unit,
         facets: List<Pair<String, String>>?,
+        limitSetting: Int,
         query: String,
         sortOrder: String,
         startFrom: Int
     ) {
+        val res = instance.resources
+        val limits = res.getIntArray(R.array.settings_num_results)
         val call = when (facets?.isNotEmpty()) {
             true -> {
                 val sb = StringBuilder()
@@ -45,14 +50,16 @@ class NetworkObjectsRepository(
                     query = query,
                     sortOrder = sortOrder,
                     from = startFrom,
-                    facets = facetsFormatted
+                    facets = facetsFormatted,
+                    limit = limits[limitSetting]
                 )
             }
             else -> apiService.getObjectSearchResults(
                 view = MUSEUM_VIEW_DETAIL,
                 query = query,
                 sortOrder = sortOrder,
-                from = startFrom
+                from = startFrom,
+                limit = limits[limitSetting]
             )
         }
         call.enqueue(object: Callback<OpacObjects> {

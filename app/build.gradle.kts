@@ -79,6 +79,7 @@ dependencies {
     implementation(libs.coil.compose)
     implementation(libs.constraint.layout)
     implementation(libs.document.file)
+    implementation(libs.fragment.activity)
     implementation(libs.kotlinx.serialization.core)
     implementation(libs.kotlinx.serialization.json)
     implementation(libs.lifecycle.livedata.ktx)

@@ -21,6 +21,7 @@ import com.michaelrmossman.aucklandmuseum3api.model.OpacObject
 import com.michaelrmossman.aucklandmuseum3api.state.ObjectsListState
 import com.michaelrmossman.aucklandmuseum3api.state.ObjectsListState.Companion.START_FROM
 import com.michaelrmossman.aucklandmuseum3api.state.SearchUiState
+import com.michaelrmossman.aucklandmuseum3api.util.SETTING_COMMON_NUM_RESULTS
 import com.michaelrmossman.aucklandmuseum3api.util.facets
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
@@ -84,6 +85,9 @@ class ObjectsViewModel(
             )
         }
         viewModelScope.launch {
+            val limitSetting = settingsRepository.getSettingById(
+                settingId = SETTING_COMMON_NUM_RESULTS
+            )
             val sortOrder =
                 SortOpecBy.entries[settingsRepository.sortOrder.first()]
             try {
@@ -91,6 +95,7 @@ class ObjectsViewModel(
                     startFrom = startFrom,
                     sortOrder = sortOrder.toString(),
                     query = searchQuery,
+                    limitSetting = limitSetting,
                     facets = facets,
                     callback = { response ->
                         when (response.responseCode) {

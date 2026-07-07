@@ -1,5 +1,7 @@
 package com.michaelrmossman.aucklandmuseum3api.data
 
+import com.michaelrmossman.aucklandmuseum3api.MuseumApplication.Companion.instance
+import com.michaelrmossman.aucklandmuseum3api.R
 import com.michaelrmossman.aucklandmuseum3api.model.OpacPerson
 import com.michaelrmossman.aucklandmuseum3api.model.OpacPersons
 import com.michaelrmossman.aucklandmuseum3api.network.MuseumApiService
@@ -17,15 +19,19 @@ class NetworkPersonsRepository(
 
     fun getPersonSearchResults(
         callback: (PersonsResponse) -> Unit,
+        limitSetting: Int,
         query: String,
         sortOrder: String,
         startFrom: Int
     ) {
+        val res = instance.resources
+        val limits = res.getIntArray(R.array.settings_num_results)
         val call = apiService.getPersonSearchResults(
             view = MUSEUM_VIEW_DETAIL,
             query = query,
             sortOrder = sortOrder,
-            from = startFrom
+            from = startFrom,
+            limit = limits[limitSetting]
         )
         call.enqueue(object: Callback<OpacPersons> {
             override fun onResponse(

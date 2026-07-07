@@ -1,7 +1,7 @@
 package com.michaelrmossman.aucklandmuseum3api.util
 
 const val DEBUG_JSON_ADDITIONAL_MESSAGES = false
-const val DEBUG_SHOW_ADDITIONAL_MESSAGES = true
+const val DEBUG_SHOW_ADDITIONAL_MESSAGES = false
 
 const val DOWNLOAD_COMPLETE_DELAY = 2_250L
 const val EMOJI_ERROR_DELAY = 2_000L

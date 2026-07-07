@@ -26,7 +26,8 @@ interface MuseumApiService {
         @Query("query") query: String,
         @Query("direction") sortOrder : String,
         @Query("facet") facets: String,
-        @Query("offset") from: Int
+        @Query("offset") from: Int,
+        @Query("limit") limit: Int
     ) : Call<OpacObjects>
 
     @GET(MUSEUM_INDEX_OBJECTS)
@@ -34,7 +35,8 @@ interface MuseumApiService {
         @Query("view") view: String,
         @Query("query") query: String,
         @Query("direction") sortOrder : String,
-        @Query("offset") from: Int
+        @Query("offset") from: Int,
+        @Query("limit") limit: Int
     ) : Call<OpacObjects>
 
     @GET(MUSEUM_INDEX_PERSON)
@@ -47,6 +49,7 @@ interface MuseumApiService {
         @Query("view") view: String,
         @Query("query") query: String,
         @Query("direction") sortOrder : String,
-        @Query("offset") from: Int
+        @Query("offset") from: Int,
+        @Query("limit") limit: Int
     ) : Call<OpacPersons>
 }
